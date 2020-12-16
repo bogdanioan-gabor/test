@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+  - 2.2
+  - jruby
+
+notifications:
+  slack:
+    rooms:
+      secure: Q2aiN5I3OGPUvxn+PK7nZdrI7C4wqViO+2BNIYbsoJsaVkvZExD+VfZCItwCbI5BZmvoLKroBQVHo09ndUQD8TzMQ/VAmOGHnqyd1WnGuKTBywx54/zlrfQ2xhEwcidsqOmJM68l+/LnuVPpi8xB+cEC9QwwPZEd1ZEACdlS8FtqIln00+jyIPLdFb2jHy5bcjnzEbsHa3U+7R+oFH651892Herl3tiXIbUePR9lK6BDtQC2zcJYhIJvcJhWIhUUnP7uairRyNT4W2Me6eYQa6w/i8CvhcY73KMa0HN/xEzYyQg196mlIRySRqVrIfPHqm18kz7JKeqUqKpK6rzUV2sFUFg37c1IbheQrcwxqKZ4o0Duu3XBsB34Gp5PsUbyz2t9CQDjUWndUdZUccO/gABwnkOS909Vf/tzQsU7hLqQvE7+MrdP7Lh/0hrOnVR7Dtl2z4Llf7rzJz4Uwi92QEtzJFv0gSGeDTMcQ6OFpXMjVQPt8jSooGqxtiBD3IAkpBjIZ8lFcqksoueZW2NsFAJGstkRi/uSs9fGFBaDiHZBuX7heCGGlmCdonHMI/nMKT7MhOimr/58PHGLOiul0Pcl29V3GEHpXvG70v3tUWlhupSGe5ZBXpcycylPPgBF7mAcwzknaLpCeLwxfFcyQgE0ySZpbCtihahFDgoF+j8=
+    on_success: always
+    on_failure: always
+    on_start: always
+    on_cancel: always
+    on_pull_requests: false
+    template:
+    - Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository_slug}@%{branch} by %{author} %{result} in %{duration}
